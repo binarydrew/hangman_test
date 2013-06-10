@@ -7,7 +7,19 @@ class TestHangman < Test::Unit::TestCase
 	  def setup
 		@a = Hangman.new
 		@a.word = "instance"
+		@a.board = "________"
 	  end
+
+	  def test_guess
+	  	@a.guess("i")
+	  	assert_equal @a.board, "i_______"
+
+	  	@a.guess("g")
+	  	assert_equal @a.board, "i_______"
+
+	  	#assert_equal 7, @a.chances
+	  end
+
 
 	  def test_initialize
 	  	b = Hangman.new
@@ -26,9 +38,10 @@ class TestHangman < Test::Unit::TestCase
 	  def test_word_has?
 	  	assert_equal @a.word_has?("i"), true
 	  	assert_equal @a.word_has?("b"), false
-
 	  end
+
+	  
   
 
 
-  en
+  end
