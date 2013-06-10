@@ -10,15 +10,6 @@ class TestHangman < Test::Unit::TestCase
 		@a.board = "________"
 	  end
 
-	  def test_guess
-	  	@a.guess("i")
-	  	assert_equal @a.board, "i_______"
-
-	  	@a.guess("g")
-	  	assert_equal @a.board, "i_______"
-
-	  	#assert_equal 7, @a.chances
-	  end
 
 
 	  def test_initialize
@@ -41,6 +32,15 @@ class TestHangman < Test::Unit::TestCase
 	  end
 
 	  
+	  def test_guess
+	  	@a.guess("i")
+	  	assert_equal @a.board, "i_______"
+
+	  	@a.guess("g")
+	  	assert_equal @a.board, "i_______"
+
+	  	#assert_equal 7, @a.chances
+	  end
   
 
 
