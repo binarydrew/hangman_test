@@ -39,7 +39,7 @@ class TestHangman < Test::Unit::TestCase
 	  	@a.guess("g")
 	  	assert_equal @a.board, "i_______"
 
-	  	#assert_equal 7, @a.chances
+	  	assert_equal 7, @a.chances
 	  end
   
 
